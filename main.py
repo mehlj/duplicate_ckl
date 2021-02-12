@@ -42,6 +42,8 @@ for line in file:
     ckl_text = re.sub(r'<HOST_NAME>(.*)</HOST_NAME>', '<HOST_NAME>' + line[0] + '</HOST_NAME>', ckl_text)
     ckl_text = re.sub(r'<HOST_IP>(.*)</HOST_IP>', '<HOST_IP>' + line[1] + '</HOST_IP>', ckl_text)
     ckl_text = re.sub(r'<HOST_MAC>(.*)</HOST_MAC>', '<HOST_MAC>' + line[2] + '</HOST_MAC>', ckl_text)
+    ckl_text = re.sub(r'<HOST_FQDN>(.*)</HOST_FQDN>', '<HOST_FQDN>' + line[2] + '</HOST_FQDN>', ckl_text)
+
 
     ckl_out = open(new_ckl, 'w')
     ckl_out.writelines(ckl_text)
